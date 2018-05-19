@@ -26,13 +26,13 @@ const createNote = () => {
     const id = uuidv4()
     const timestamp = moment().valueOf()
 
-    notes.push({
+    notes = [...notes, {
         id: id,
         title: '',
         body: '',
         createdAt: timestamp,
         updatedAt: timestamp
-    })
+    }]
     saveNotes()
 
     return id
